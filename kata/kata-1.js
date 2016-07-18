@@ -10,6 +10,7 @@ function getValue (obj, key) {
 }
 
 // ageOneYear should add one to the `age` property of `obj`
+// and then return obj
 function ageOneYear (obj) {
 }
 
