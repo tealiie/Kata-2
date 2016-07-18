@@ -18,7 +18,7 @@ test('getValue gets values from objects', function (t) {
 })
 
 test('ageOneYear adds 1 year to the age property of an object', function (t) {
-  var mickey = { 
+  var mickey = {
     name: 'Mickey Mouse',
     age: 64,
     email: 'mickey@disney.com'
@@ -33,7 +33,7 @@ test('ageOneYear adds 1 year to the age property of an object', function (t) {
 })
 
 test('deleteProp deletes properties', function (t) {
-  var mickey = { 
+  var mickey = {
     name: 'Mickey Mouse',
     age: 64,
     email: 'mickey@disney.com'
@@ -133,8 +133,8 @@ test('deleteItem deletes ALL instances of item from the array', function (t) {
 })
 
 test('keys returns own property keys for an object', function (t) {
-  var dracula = { 
-    name: 'Count Dracula', 
+  var dracula = {
+    name: 'Count Dracula',
     email: 'dracula@hotmail.com',
     password: '12345',
     country: 'Transylvania'
@@ -145,8 +145,8 @@ test('keys returns own property keys for an object', function (t) {
 })
 
 test('values returns own values for an object', function (t) {
-  var dracula = { 
-    name: 'Count Dracula', 
+  var dracula = {
+    name: 'Count Dracula',
     email: 'dracula@hotmail.com',
     password: '12345',
     country: 'Transylvania'
@@ -157,8 +157,8 @@ test('values returns own values for an object', function (t) {
 })
 
 test('zipObject returns an object by combining key and value arrays', function (t) {
-  var draculaReborn = { 
-    name: 'Count Dracula', 
+  var draculaReborn = {
+    name: 'Count Dracula',
     email: 'dracula@hotmail.com',
     password: '12345',
     country: 'Transylvania'
@@ -171,8 +171,8 @@ test('zipObject returns an object by combining key and value arrays', function (
 })
 
 test('unzipObject returns an array of key/value pairs', function (t) {
-  var dracula = { 
-    name: 'Count Dracula', 
+  var dracula = {
+    name: 'Count Dracula',
     email: 'dracula@hotmail.com',
     password: '12345',
     country: 'Transylvania'
@@ -187,36 +187,36 @@ test('unzipObject returns an array of key/value pairs', function (t) {
 
 test('findOneByProperty returns an object with matching property', function (t) {
   var monsters = [
-    { 
-      name: 'Count Dracula', 
-      email: 'dracula@hotmail.com', 
+    {
+      name: 'Count Dracula',
+      email: 'dracula@hotmail.com',
       country: 'Transylvania',
-      age: 588,
+      age: 588
     },
-    { 
-      name: "Frankenstein's Monster", 
-      email: 'franky@monster.com', 
+    {
+      name: "Frankenstein's Monster",
+      email: 'franky@monster.com',
       country: 'Switzerland',
-      age: 232,
+      age: 232
     },
-    { 
-      name: 'Cthulhu', 
-      email: 'cthulhu@thedeep.com', 
-      country: "R'lyeh", 
-      age: 1032988 
+    {
+      name: 'Cthulhu',
+      email: 'cthulhu@thedeep.com',
+      country: "R'lyeh",
+      age: 1032988
     },
-    { 
-      name: 'Taniwha', 
-      email: 'taniwha@awa.com', 
-      country: 'Aotearoa', 
+    {
+      name: 'Taniwha',
+      email: 'taniwha@awa.com',
+      country: 'Aotearoa',
       age: 232
     }
   ]
-  var expected = { 
-    name: 'Cthulhu', 
-    email: 'cthulhu@thedeep.com', 
-    country: "R'lyeh", 
-    age: 1032988 
+  var expected = {
+    name: 'Cthulhu',
+    email: 'cthulhu@thedeep.com',
+    country: "R'lyeh",
+    age: 1032988
   }
   var actual = kata2.findOneByProperty(monsters, { name: 'Cthulhu' })
   t.deepEqual(actual, expected)
@@ -224,46 +224,45 @@ test('findOneByProperty returns an object with matching property', function (t) 
 
 test('findAll returns the correct set of elements', function (t) {
   var monsters = [
-    { 
-      name: 'Count Dracula', 
-      email: 'dracula@hotmail.com', 
+    {
+      name: 'Count Dracula',
+      email: 'dracula@hotmail.com',
       country: 'Transylvania',
-      age: 588,
+      age: 588
     },
-    { 
-      name: "Frankenstein's Monster", 
-      email: 'franky@monster.com', 
+    {
+      name: "Frankenstein's Monster",
+      email: 'franky@monster.com',
       country: 'Switzerland',
-      age: 232,
+      age: 232
     },
-    { 
-      name: 'Cthulhu', 
-      email: 'cthulhu@thedeep.com', 
-      country: "R'lyeh", 
-      age: 1032988 
+    {
+      name: 'Cthulhu',
+      email: 'cthulhu@thedeep.com',
+      country: "R'lyeh",
+      age: 1032988
     },
-    { 
-      name: 'Taniwha', 
-      email: 'taniwha@awa.com', 
-      country: 'Aotearoa', 
+    {
+      name: 'Taniwha',
+      email: 'taniwha@awa.com',
+      country: 'Aotearoa',
       age: 232
     }
   ]
   var expected = [
-    { 
-      name: "Frankenstein's Monster", 
-      email: 'franky@monster.com', 
+    {
+      name: "Frankenstein's Monster",
+      email: 'franky@monster.com',
       country: 'Switzerland',
-      age: 232,
+      age: 232
     },
-    { 
-      name: 'Taniwha', 
-      email: 'taniwha@awa.com', 
-      country: 'Aotearoa', 
+    {
+      name: 'Taniwha',
+      email: 'taniwha@awa.com',
+      country: 'Aotearoa',
       age: 232
     }
   ]
   var actual = kata2.findAll(monsters, { age: 232 })
   t.deepEqual(actual, expected)
 })
-
