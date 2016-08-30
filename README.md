@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JavaScript Kata: Objects and Arrays
 
 ## Introduction
@@ -115,3 +116,6 @@ The following links may help with the less familiar aspects of this challenge:
 - [JavaScript arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Code kata](https://en.wikipedia.org/wiki/Kata_(programming))
 
+=======
+# Kata-2
+>>>>>>> 7278191dafb2a414fbd4b42833382833745b88fd
